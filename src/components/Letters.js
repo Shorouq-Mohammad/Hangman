@@ -7,7 +7,7 @@ class Letters extends Component{
         return (
             <div>
                 <div>Available Letter</div>
-                {letters.map(l => <Letter />)}
+                {Object.entries(this.props.letterStatus).map(l => <Letter letter={l[0]} status={l[1]} key={l[0]} />)}
             </div>
         )
     }

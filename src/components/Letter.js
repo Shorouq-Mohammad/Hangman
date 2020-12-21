@@ -4,9 +4,10 @@ class Letter extends Component{
 
     render(){
         return (
-            <span>
-                'A'
-            </span>
+            <div className="letter">
+                {this.props.status ? <span className="true">{this.props.letter} </span> : 
+                <span className="false">{this.props.letter} </span>}
+            </div>
         )
     }
 }

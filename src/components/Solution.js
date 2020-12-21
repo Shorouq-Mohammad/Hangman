@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
+import Letter from './Letter';
 
 class Solution extends Component{
 
     render(){
-        const spaces = ['_', '_', '_', '_']
         return (
             <div>
-                {spaces.map(s => <span>{s} </span>)}
-                <div className="hint"><em>Hint</em></div>
+                {[...this.props.solution.word].map(c => this.props.letterStatus[c] ? <Letter letter={c}/> : <Letter letter='_'/>)}
+                <div className="hint"><em>{this.props.solution.hint}</em></div>
             </div>
         )
     }
