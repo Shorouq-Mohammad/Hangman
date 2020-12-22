@@ -93,7 +93,7 @@ class App extends Component {
     return (
       <div className="App">
         <Score score={this.state.score}/>
-        {this.state.win === 0 ? <Lose gameEnd={this.gameEnd}/>:<img src={this.state.images[this.state.mistakes]} alt=""/>}
+        {this.state.win ? <img src={this.state.images[this.state.mistakes]} alt=""/> : <Lose gameEnd={this.gameEnd}/>}
         <Solution letterStatus={this.state.letterStatus} solution={this.state.solution} />
         <Letters letterStatus={this.state.letterStatus} selectLetter={this.selectLetter} />
       </div>
