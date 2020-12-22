@@ -1,46 +1,70 @@
-.App {
-  text-align: center;
-}
+body{
+  background-color: #E5DBD9;
+  font-size: 2.5vw;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.true{
-  color: lightgray;
-}
-
 .letter{
   display: inline-block;
+  width: 2.5vw;
+  height: 4vh;
+  background-color: #218B82;
+  justify-items: center;
+  padding: 1vw;
+  margin: 0.5vw;
+  position: relative;
+}
+span { 
+  display:block; 
+  margin:0 auto; 
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+} 
+.true{
+  background-color: #98D4BB;
+}
+.allLetters{
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+}
+.solution{
+  align-self: center;
+  display: grid;
+  justify-items: center;
+  
+}
+.App{
+  display: grid;
+  grid-template-rows: 0.5fr 3fr 2fr 3fr;
+  justify-items: center;
+  max-height: 100vh;
+}
+.available{
+  font-size: 1.5vw;
+}
+.hint{
+  font-size: 2vw;
+}
+.lose{
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+.lose button{
+  font-size: 1.5vw;
+  border-radius: 8%;
+  background-color: #EB96AA;
+}
+.high-score{
+  color: #AF9500;
+}
+.medium-score{
+  color: silver;
+}
+.low-score{
+  color: #AD8A56;
 }
